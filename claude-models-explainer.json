@@ -1,0 +1,427 @@
+{
+  "id": "exp_85906246-4999-45a2-88dd-d2e76335512d",
+  "topic": "Choosing the Right Claude Model",
+  "slug": "choosing-the-right-claude-model",
+  "template": "comparison",
+  "generatedAt": "2026-02-17T00:00:00Z",
+  "sections": [
+    {
+      "id": "hero",
+      "order": 1,
+      "type": "hero",
+      "title": "Choosing the right Claude model",
+      "subtitle": "Three models. One family. From lightning-fast Haiku to deep-thinking Opus -- an interactive guide to understanding what each model does best, what it costs, and when to use it.",
+      "eyebrow": "Interactive Explainer -- Updated February 2025",
+      "narration": "The hero introduces the Claude model lineup with three animated stat counters that count up on scroll: 3 model tiers (economy, balanced, frontier), 200K shared context window, and 50% batch API savings. A scroll-to-explore CTA anchors to the first scrolly section.",
+      "animatedCounters": [
+        { "value": 3, "suffix": "", "label": "Model tiers", "sublabel": "economy -> balanced -> frontier" },
+        { "value": 200, "suffix": "K", "label": "Context window", "sublabel": "tokens across all models" },
+        { "value": 50, "suffix": "%", "label": "Batch savings", "sublabel": "with the Batch API" }
+      ],
+      "keyPoints": [
+        "Three model tiers cover the full cost-intelligence spectrum",
+        "All models share a 200K token context window",
+        "Batch API provides 50% cost reduction for non-urgent workloads"
+      ]
+    },
+    {
+      "id": "meet-the-family",
+      "order": 2,
+      "type": "scrolly",
+      "title": "Meet the Family",
+      "subtitle": "Three models, each optimized for a different balance of speed, intelligence, and cost.",
+      "narration": "A scroll-driven section with an SVG scatter plot showing three model nodes positioned along intelligence (x) and cost (y) axes. Uses a vehicle analogy -- scooter (Haiku), sedan (Sonnet), truck (Opus). Each step highlights one model, dimming the others, and reveals a detail card with pricing and context specs.",
+      "diagram": {
+        "type": "svg",
+        "name": "model-scatter-plot",
+        "description": "SVG scatter plot with three model nodes connected by lines. Axes: Intelligence (horizontal) and Cost (vertical). Nodes animate size and glow ring on focus."
+      },
+      "steps": [
+        {
+          "step": 0,
+          "title": "Think of it like choosing a vehicle",
+          "summary": "Introduces the scooter/sedan/truck analogy for Claude's three models. Each is built for a different balance of intelligence, speed, and cost.",
+          "callout": "Most teams use 2 or 3 models together -- routing simple tasks to the fast one and complex tasks to the smart one.",
+          "highlightedModels": ["haiku", "sonnet", "opus"]
+        },
+        {
+          "step": 1,
+          "title": "The scooter: Haiku 4.5",
+          "summary": "Haiku is the speed demon at $0.80/1M input tokens -- 19x cheaper than Opus. Excels at classification, routing, real-time responses, and high-volume processing.",
+          "callout": "This is why chatbots feel instant -- they're almost certainly running on a model like Haiku.",
+          "highlightedModels": ["haiku"],
+          "detailCard": { "input": "$0.80/1M", "output": "$4.00/1M", "context": "200K", "maxOutput": "8,192" }
+        },
+        {
+          "step": 2,
+          "title": "The sedan: Sonnet 4.5",
+          "summary": "Sonnet is the workhorse model most teams default to. Smart enough for coding assistants, content generation, and data analysis without breaking the budget.",
+          "callout": "If you're not sure which model to start with, Sonnet is almost always the right answer.",
+          "highlightedModels": ["sonnet"],
+          "detailCard": { "input": "$3.00/1M", "output": "$15.00/1M", "context": "200K", "maxOutput": "16,384" }
+        },
+        {
+          "step": 3,
+          "title": "The truck: Opus 4.6",
+          "summary": "Opus is for high-stakes, complex problems -- legal analysis, research synthesis, strategic planning. At $15/1M input tokens, you pay for the best reasoning available.",
+          "callout": "Opus scores 83.7% on MMLU Pro -- graduate-level reasoning across 57 subjects.",
+          "highlightedModels": ["opus"],
+          "detailCard": { "input": "$15.00/1M", "output": "$75.00/1M", "context": "200K", "maxOutput": "32,000" }
+        }
+      ],
+      "keyPoints": [
+        "Haiku: speed demon, 19x cheaper than Opus, ideal for classification and routing",
+        "Sonnet: the workhorse, best price-to-performance for most production use cases",
+        "Opus: highest intelligence, best for complex reasoning and high-stakes decisions",
+        "Most teams use 2-3 models together with intelligent routing"
+      ]
+    },
+    {
+      "id": "benchmarks",
+      "order": 3,
+      "type": "scrolly",
+      "title": "The Intelligence Spectrum",
+      "subtitle": "How each model performs across industry-standard evaluations.",
+      "narration": "Animated horizontal bar charts for 4 key benchmarks (SWE-bench Verified, OSWorld, ARC-AGI-2, Finance Agent). Each step highlights a benchmark category -- coding, abstract reasoning, real-world agents -- while dimming others. Bars animate width on scroll with eased transitions.",
+      "diagram": {
+        "type": "svg",
+        "name": "benchmark-bar-charts",
+        "description": "Grouped horizontal bar chart with 4 benchmarks. Each benchmark shows 3 bars (Haiku green, Sonnet blue, Opus purple) with animated widths and value labels."
+      },
+      "benchmarks": [
+        { "name": "SWE-bench Verified", "haiku": 25.0, "sonnet": 55.0, "opus": 72.5, "max": 100, "unit": "%", "category": "coding" },
+        { "name": "OSWorld", "haiku": 12.0, "sonnet": 28.5, "opus": 38.2, "max": 50, "unit": "%", "category": "real-world-agents" },
+        { "name": "ARC-AGI-2", "haiku": 4.0, "sonnet": 14.0, "opus": 21.2, "max": 30, "unit": "%", "category": "reasoning" },
+        { "name": "Finance Agent", "haiku": 48.0, "sonnet": 72.0, "opus": 85.0, "max": 100, "unit": "%", "category": "real-world-agents" }
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "title": "Numbers tell the story",
+          "summary": "Introduces benchmarks as standardized tests for AI models, using the student exam analogy -- one finishes first with B+, another takes longer for an A, the third aces everything but needs the most time.",
+          "callout": "Higher scores mean the model gets more answers right -- but scoring 5% higher often costs 5x more.",
+          "highlightedBenchmarks": ["SWE-bench Verified", "OSWorld", "ARC-AGI-2", "Finance Agent"]
+        },
+        {
+          "step": 1,
+          "title": "Can it actually code?",
+          "summary": "SWE-bench Verified tests real bug-fixing in production code. Opus solves 72.5% of issues -- nearly 3x more than Haiku. This is why Opus powers tools like Claude Code.",
+          "callout": "This is why your AI coding assistant sometimes 'just works' and sometimes needs hand-holding -- model capability matters enormously.",
+          "highlightedBenchmarks": ["SWE-bench Verified"]
+        },
+        {
+          "step": 2,
+          "title": "Can it think abstractly?",
+          "summary": "ARC-AGI-2 tests novel pattern recognition the model has never seen before. Scores are low across the board, but Opus leads at 21.2%. This is the frontier of AI reasoning.",
+          "callout": "ARC-AGI-2 is designed to resist memorization -- models can't just recall answers they've seen in training data.",
+          "highlightedBenchmarks": ["ARC-AGI-2"]
+        },
+        {
+          "step": 3,
+          "title": "Can it do a real job?",
+          "summary": "OSWorld and Finance Agent test real task completion -- using a computer GUI, managing spreadsheets, executing financial analysis. These matter most for production: not 'can it answer trivia?' but 'can it do useful work?'",
+          "callout": "Agent benchmarks are the new frontier -- they test the models on tasks that would actually save you time and money.",
+          "highlightedBenchmarks": ["OSWorld", "Finance Agent"]
+        }
+      ],
+      "keyPoints": [
+        "Opus solves 72.5% of SWE-bench coding issues, nearly 3x more than Haiku",
+        "ARC-AGI-2 tests genuine novel reasoning -- Opus leads at 21.2%",
+        "Real-world agent benchmarks are the most production-relevant measures",
+        "Higher benchmark scores often correlate with 5x or more cost increase"
+      ]
+    },
+    {
+      "id": "pricing",
+      "order": 4,
+      "type": "scrolly",
+      "title": "What It Costs",
+      "subtitle": "Pay per token, scale from zero to millions of requests.",
+      "narration": "A 3-step scrolly section. Step 1 shows price comparison bars for all three models (input and output per 1M tokens). Step 2 visualizes the 5x output rule with proportional blocks. Step 3 presents four cost optimization strategies with savings percentages in a stacked card layout.",
+      "diagram": {
+        "type": "svg",
+        "name": "pricing-comparison-bars",
+        "description": "Three visualization states: (1) horizontal price bars for input/output per model, (2) proportional blocks showing 5x output cost multiplier, (3) stacked strategy cards with savings badges."
+      },
+      "pricing": {
+        "models": [
+          { "name": "Haiku 4.5", "inputPerMillion": 0.80, "outputPerMillion": 4.00 },
+          { "name": "Sonnet 4.5", "inputPerMillion": 3.00, "outputPerMillion": 15.00 },
+          { "name": "Opus 4.6", "inputPerMillion": 15.00, "outputPerMillion": 75.00 }
+        ],
+        "outputMultiplier": 5,
+        "optimizationStrategies": [
+          { "name": "Prompt Caching", "saving": "90%", "description": "Cache repeated system prompts" },
+          { "name": "Batch API", "saving": "50%", "description": "Non-urgent batch processing" },
+          { "name": "Model Routing", "saving": "60-80%", "description": "Use Haiku for simple tasks" },
+          { "name": "Concise Output", "saving": "2-3x", "description": "Reduce output token count" }
+        ]
+      },
+      "steps": [
+        {
+          "step": 0,
+          "title": "You pay per word, not per month",
+          "summary": "Token-based pricing explained via electricity analogy. Input and output tokens priced separately. Opus output costs 18.75x more than Haiku output.",
+          "callout": "A 1,000-word document is roughly 1,300 tokens. A typical API call uses 500-2,000 tokens."
+        },
+        {
+          "step": 1,
+          "title": "The hidden cost multiplier",
+          "summary": "Output tokens cost 5x more than input tokens across all models. A verbose chatbot costs dramatically more than a concise one on the same model. Sonnet: $3 input vs $15 output per 1M tokens.",
+          "callout": "This is why 'be concise' in your system prompt isn't just a style preference -- it's a cost optimization."
+        },
+        {
+          "step": 2,
+          "title": "Four ways to slash your bill",
+          "summary": "Prompt caching (90% savings), Batch API (50% discount), model routing (60-80% reduction), and concise output (2-3x savings). Combined, these can reduce a $10,000/month bill to under $2,000.",
+          "callout": "The best AI teams don't spend the most -- they spend the smartest."
+        }
+      ],
+      "keyPoints": [
+        "Token-based pricing: pay for what you use, like electricity",
+        "Output tokens cost 5x more than input tokens across all models",
+        "Opus output is 18.75x more expensive than Haiku output",
+        "Combined optimizations can reduce costs by 80% or more"
+      ]
+    },
+    {
+      "id": "calculator",
+      "order": 5,
+      "type": "interactive",
+      "title": "Cost Calculator",
+      "subtitle": "Think of this like an electricity bill estimator. Plug in your usage, see what each model would cost.",
+      "narration": "An interactive cost calculator with 3 range sliders (input tokens per request, output tokens per request, requests per day), 4 preset scenario buttons, and 2 optimization toggles (Prompt Caching, Batch API). Results show monthly cost estimates for all three models with comparative bar widths and a 'Cheapest' badge.",
+      "widgets": [
+        {
+          "type": "range-slider",
+          "name": "inputTokens",
+          "label": "Input tokens per request",
+          "min": 100,
+          "max": 50000,
+          "step": 100,
+          "default": 1000
+        },
+        {
+          "type": "range-slider",
+          "name": "outputTokens",
+          "label": "Output tokens per request",
+          "min": 50,
+          "max": 16000,
+          "step": 50,
+          "default": 500
+        },
+        {
+          "type": "range-slider",
+          "name": "requestsPerDay",
+          "label": "Requests per day",
+          "min": 10,
+          "max": 100000,
+          "step": 10,
+          "default": 1000
+        },
+        {
+          "type": "toggle",
+          "name": "promptCaching",
+          "label": "Prompt Caching",
+          "savings": "60%",
+          "default": false
+        },
+        {
+          "type": "toggle",
+          "name": "batchApi",
+          "label": "Batch API",
+          "savings": "50%",
+          "default": false
+        }
+      ],
+      "presets": [
+        { "id": "chatbot", "name": "Customer Support Bot", "icon": "chatbox", "inputTokens": 500, "outputTokens": 200, "requestsPerDay": 5000 },
+        { "id": "coding", "name": "Coding Assistant", "icon": "code", "inputTokens": 2000, "outputTokens": 1000, "requestsPerDay": 500 },
+        { "id": "analysis", "name": "Research Analysis", "icon": "microscope", "inputTokens": 10000, "outputTokens": 3000, "requestsPerDay": 50 },
+        { "id": "content", "name": "Content Pipeline", "icon": "pencil", "inputTokens": 1000, "outputTokens": 2000, "requestsPerDay": 200 }
+      ],
+      "costFormula": "monthlyCost = (inputTokens / 1M) * inputPrice * requestsPerDay * 30 + (outputTokens / 1M) * outputPrice * requestsPerDay * 30; if caching: total *= 0.4; if batch: total *= 0.5",
+      "keyPoints": [
+        "Three sliders control input tokens, output tokens, and daily request volume",
+        "Four preset scenarios cover common deployment patterns",
+        "Prompt caching and Batch API toggles show compounding savings",
+        "Real-time cost comparison across all three models with cheapest highlighted"
+      ]
+    },
+    {
+      "id": "use-cases",
+      "order": 6,
+      "type": "interactive",
+      "title": "Where Each Model Shines",
+      "subtitle": "Like picking the right tool from a toolbox -- each model excels at different jobs.",
+      "narration": "A filterable gallery of 12 use case cards across three models. Filter tabs (All, Haiku, Sonnet, Opus) toggle visibility with smooth transitions. Each card displays an icon, title, description, and a colored model badge.",
+      "widgets": [
+        {
+          "type": "filter-tabs",
+          "name": "modelFilter",
+          "options": ["All", "Haiku", "Sonnet", "Opus"],
+          "default": "All"
+        }
+      ],
+      "useCases": [
+        { "title": "Customer Support", "model": "haiku", "category": "support", "description": "Automated ticket routing and response generation" },
+        { "title": "Content Moderation", "model": "haiku", "category": "safety", "description": "Real-time content classification and filtering" },
+        { "title": "Data Extraction", "model": "haiku", "category": "data", "description": "Structured data extraction from unstructured text" },
+        { "title": "Coding Assistant", "model": "sonnet", "category": "engineering", "description": "Code completion, debugging, and refactoring" },
+        { "title": "Content Writing", "model": "sonnet", "category": "content", "description": "Blog posts, marketing copy, social media content" },
+        { "title": "Data Analysis", "model": "sonnet", "category": "data", "description": "Analyzing datasets, generating insights and reports" },
+        { "title": "API Integration", "model": "sonnet", "category": "engineering", "description": "Building and testing API connections" },
+        { "title": "Translation", "model": "sonnet", "category": "content", "description": "Multi-language translation with context preservation" },
+        { "title": "Research Synthesis", "model": "opus", "category": "research", "description": "Multi-source research analysis and literature review" },
+        { "title": "Strategic Planning", "model": "opus", "category": "strategy", "description": "Complex business analysis and strategic recommendations" },
+        { "title": "Legal Analysis", "model": "opus", "category": "professional", "description": "Contract review, compliance checking, legal research" },
+        { "title": "Scientific Writing", "model": "opus", "category": "research", "description": "Academic papers, grant proposals, technical documentation" }
+      ],
+      "keyPoints": [
+        "12 use cases distributed across 3 models (3 Haiku, 5 Sonnet, 4 Opus)",
+        "Haiku excels at high-volume, low-complexity tasks like support and moderation",
+        "Sonnet covers the broadest range: coding, content, data, and integration",
+        "Opus handles research, strategy, legal, and scientific writing"
+      ]
+    },
+    {
+      "id": "quiz",
+      "order": 7,
+      "type": "interactive",
+      "title": "Find Your Model",
+      "subtitle": "Like a sommelier recommending wine -- answer 5 questions and we'll suggest the best model for your palate.",
+      "narration": "A 5-question personality quiz with radio-button options. Each answer adds weighted scores to Haiku, Sonnet, and Opus. A progress bar tracks completion. The results screen shows the recommended model with score breakdown bars and a retake button.",
+      "widgets": [
+        {
+          "type": "radio-buttons",
+          "name": "quizOptions",
+          "description": "Each question presents 3 options. Each option adds weighted scores to haiku, sonnet, and opus tallies."
+        },
+        {
+          "type": "progress-bar",
+          "name": "quizProgress",
+          "description": "Horizontal bar showing completion percentage across 5 questions."
+        },
+        {
+          "type": "button",
+          "name": "retakeQuiz",
+          "label": "Retake Quiz",
+          "description": "Resets all scores and returns to question 1."
+        }
+      ],
+      "questions": [
+        { "id": 1, "question": "What matters most for your application?", "options": ["Speed & low cost", "Balance of quality & cost", "Maximum intelligence"] },
+        { "id": 2, "question": "How complex are the tasks?", "options": ["Simple classification/routing", "Moderate -- coding, content, analysis", "Highly complex -- research, strategy"] },
+        { "id": 3, "question": "What is your daily request volume?", "options": ["10,000+ requests/day", "100-10,000 requests/day", "Under 100 requests/day"] },
+        { "id": 4, "question": "How important is output quality?", "options": ["Good enough is fine", "High quality, but cost matters", "Must be the absolute best"] },
+        { "id": 5, "question": "What is your latency requirement?", "options": ["Sub-second (real-time)", "A few seconds is fine", "Minutes are acceptable"] }
+      ],
+      "scoringModel": "Each option assigns 0-3 points to each model. Totals are compared after 5 questions. Highest scorer is the recommendation. Results show percentage breakdown.",
+      "keyPoints": [
+        "5 questions covering priority, complexity, volume, quality, and latency",
+        "Weighted scoring system maps answers to model recommendations",
+        "Results show percentage fit across all three models, not just the winner",
+        "Retake option allows exploring different usage profiles"
+      ]
+    },
+    {
+      "id": "decision",
+      "order": 8,
+      "type": "scrolly",
+      "title": "The Decision Map",
+      "subtitle": "Quick reference for choosing the right model by scenario.",
+      "narration": "A scroll-driven decision matrix grouped by model. The overview shows all three model zones. Subsequent steps focus on each zone -- Haiku for simple/fast tasks, Sonnet for production workloads, Opus for complex reasoning -- with scenario cards expanding to show reasoning when focused.",
+      "diagram": {
+        "type": "interactive-map",
+        "name": "decision-map",
+        "description": "Three grouped zones (Haiku, Sonnet, Opus), each containing scenario cards. Focused zone scales up slightly with a colored border and reveals per-scenario reasoning text."
+      },
+      "decisionMatrix": [
+        { "scenario": "High-volume, low-complexity tasks", "recommendation": "haiku", "reason": "Lowest cost, fastest response time" },
+        { "scenario": "Real-time user-facing applications", "recommendation": "haiku", "reason": "Sub-second latency for responsive UX" },
+        { "scenario": "Classification and routing", "recommendation": "haiku", "reason": "Simple decisions at massive scale" },
+        { "scenario": "General-purpose production workloads", "recommendation": "sonnet", "reason": "Best balance of quality and cost" },
+        { "scenario": "Code generation and review", "recommendation": "sonnet", "reason": "Strong coding with reasonable pricing" },
+        { "scenario": "Content creation at scale", "recommendation": "sonnet", "reason": "High-quality output without premium pricing" },
+        { "scenario": "Complex multi-step reasoning", "recommendation": "opus", "reason": "Highest reasoning capability" },
+        { "scenario": "Research and analysis", "recommendation": "opus", "reason": "Deepest understanding and synthesis" },
+        { "scenario": "High-stakes decision support", "recommendation": "opus", "reason": "Most reliable for critical decisions" },
+        { "scenario": "Novel problem solving", "recommendation": "opus", "reason": "Best at handling edge cases and ambiguity" }
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "title": "A simple decision framework",
+          "summary": "Restaurant analogy: fast food (Haiku) for quick meals, solid bistro (Sonnet) for most occasions, Michelin-star (Opus) when the experience really matters.",
+          "callout": "Most teams end up using 2-3 models, routing requests based on complexity -- not locking into just one.",
+          "highlightedZones": ["haiku", "sonnet", "opus"]
+        },
+        {
+          "step": 1,
+          "title": "Haiku: when speed trumps depth",
+          "summary": "High-volume classification, real-time responses, simple routing. A support system processing 50K tickets/day costs $160/month on Haiku vs $3,000/month on Opus.",
+          "callout": "This is why most chatbots feel instant -- they're running on economy-tier models like Haiku.",
+          "highlightedZones": ["haiku"]
+        },
+        {
+          "step": 2,
+          "title": "Sonnet: the default choice",
+          "summary": "Coding assistants, marketing content, data analysis -- Sonnet is almost always the right starting point. 93% accuracy on HumanEval at a fraction of Opus's cost.",
+          "callout": "When in doubt, start with Sonnet and only upgrade to Opus if you measurably need better results.",
+          "highlightedZones": ["sonnet"]
+        },
+        {
+          "step": 3,
+          "title": "Opus: when accuracy is everything",
+          "summary": "Legal contract review, research synthesis, strategic planning -- for when the cost of being wrong exceeds the cost of the model.",
+          "callout": "Opus isn't expensive -- being wrong is expensive. Opus is insurance.",
+          "highlightedZones": ["opus"]
+        }
+      ],
+      "keyPoints": [
+        "Haiku: 3 scenarios focused on speed, volume, and simplicity",
+        "Sonnet: 3 scenarios covering general production, coding, and content",
+        "Opus: 4 scenarios for complex reasoning, research, high-stakes, and novel problems",
+        "Rule of thumb: Start with Sonnet, drop to Haiku for speed, upgrade to Opus for depth"
+      ]
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "6 min",
+    "totalSections": 8,
+    "scrollySections": 4,
+    "interactiveSections": 3,
+    "heroSections": 1,
+    "totalScrollySteps": 15,
+    "widgets": [
+      { "type": "range-slider", "count": 3, "location": "calculator", "description": "Input tokens, output tokens, and requests per day sliders" },
+      { "type": "toggle", "count": 2, "location": "calculator", "description": "Prompt caching and Batch API cost optimization toggles" },
+      { "type": "radio-buttons", "count": 5, "location": "quiz", "description": "5-question model selection quiz with 3 options each" },
+      { "type": "filter-tabs", "count": 1, "location": "use-cases", "description": "Model filter tabs (All, Haiku, Sonnet, Opus) for use case gallery" },
+      { "type": "theme-toggle", "count": 1, "location": "global-nav", "description": "Light/dark mode toggle in the top navigation bar" }
+    ],
+    "diagrams": [
+      { "type": "svg", "name": "model-scatter-plot", "location": "meet-the-family", "description": "SVG scatter plot with 3 model nodes on intelligence vs cost axes" },
+      { "type": "svg", "name": "benchmark-bar-charts", "location": "benchmarks", "description": "Animated horizontal bar charts for 4 benchmarks across 3 models" },
+      { "type": "svg", "name": "pricing-comparison-bars", "location": "pricing", "description": "Input/output pricing bars, 5x multiplier visualization, and optimization strategy cards" },
+      { "type": "interactive-map", "name": "decision-map", "location": "decision", "description": "Three-zone decision map grouped by model recommendation with expandable scenario cards" }
+    ],
+    "models": [
+      { "id": "haiku", "name": "Haiku 4.5", "tier": "economy", "color": "#10b981" },
+      { "id": "sonnet", "name": "Sonnet 4.5", "tier": "balanced", "color": "#3b82f6" },
+      { "id": "opus", "name": "Opus 4.6", "tier": "frontier", "color": "#8b5cf6" }
+    ],
+    "jargonTerms": [
+      { "term": "intelligence", "definition": "How well the model reasons, follows complex instructions, and produces accurate outputs" },
+      { "term": "input tokens", "definition": "The text you send to the model -- roughly 4 characters per token" },
+      { "term": "token", "definition": "A chunk of text -- roughly 4 characters or 3/4 of a word. 'Hello world' is 2 tokens." },
+      { "term": "benchmarks", "definition": "Standardized tests that measure AI model performance across different skills" },
+      { "term": "SWE-bench", "definition": "A benchmark that tests if AI can fix real bugs in real open-source Python repositories" },
+      { "term": "ARC-AGI-2", "definition": "Tests novel pattern recognition -- problems the model has never seen before, requiring genuine reasoning" }
+    ],
+    "framework": "Next.js 15 (App Router)",
+    "styling": "Inline styles with CSS custom properties for theming",
+    "fonts": ["serif (headings)", "sans-serif (body)", "monospace (data)"],
+    "themes": ["light", "dark"]
+  }
+}
