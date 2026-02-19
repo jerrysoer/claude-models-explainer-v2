@@ -123,6 +123,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body style={{ fontFamily: 'var(--font-sans), system-ui, sans-serif' }}>
         {children}
+        <img src="https://scrolly.to/pixel?s=oss&e=afe09786-66e1-4d42-84c8-ef93be779ae7&v=1" width="1" height="1" style={{position:'absolute',bottom:0,left:0,opacity:0,pointerEvents:'none'}} alt="" loading="lazy" decoding="async" />
       </body>
     </html>
   );
