@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Newsreader, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const dmSans = DM_Sans({
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ])
           }}
         />
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="2ae605db-85da-46d9-ad96-b28d1cb93ec2" />
       </head>
       <body style={{ fontFamily: 'var(--font-sans), system-ui, sans-serif' }}>
         {children}
